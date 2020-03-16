@@ -1,2 +1,3 @@
 # dijkstra
-Let's implement the Dijkstra Algorithm. 
+
+Let's implement the Dijkstra Algorithm.
