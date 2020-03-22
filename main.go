@@ -1,7 +1,6 @@
 package main
 
 func main() {
-	//
 }
 
 func dijstra(g []string, n int, s int) []string {
