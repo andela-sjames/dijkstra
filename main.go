@@ -10,7 +10,7 @@ func dijstra(g []string, n int, s int) []string {
 
 	// write sudo code here
 
-	return []string{"A"}
+	return []string{"B"}
 }
 
 // this should return the path for points distance covered.
