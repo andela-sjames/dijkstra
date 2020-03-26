@@ -14,11 +14,10 @@ func dijstra(g []string, n int, s int) []string {
 	visited := make([]bool, n)
 	distance := make([]int, n)
 
-	// Will hack this by using a negative number
-	// to make this pq a min Heap pq.
-	minpq = pqueue.NewHeap()
-
-	// write sudo code here
+	// Set Min option to true for minheap
+	minheap := pqueue.NewHeap(pqueue.Options{
+		Min: true,
+	})
 
 	return []string{"B"}
 }
