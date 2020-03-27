@@ -1,7 +1,3 @@
-github.com/andela-sjames/priorityQueue v0.0.0-20200315192656-88daddf774c9 h1:36X29CEOQ2uEmysyqtZ3Vc6dH/E2kRF3hgvHt89fuUU=
-github.com/andela-sjames/priorityQueue v0.0.0-20200315192656-88daddf774c9/go.mod h1:g1g5gQZGZxfgOjFYFS+jSvSwtEvL7hCdpGAEz/2RNEQ=
-github.com/andela-sjames/priorityQueue v1.0.0 h1:c1hjo+vqu44cHOC5qQvqfCh/h+IDWQCH8OcWcBjGsbI=
-github.com/andela-sjames/priorityQueue v1.0.0/go.mod h1:g1g5gQZGZxfgOjFYFS+jSvSwtEvL7hCdpGAEz/2RNEQ=
 github.com/andela-sjames/priorityQueue v1.2.0 h1:dWYS4lyXdzQVu0wRS20MVM/J4xiwMvukYnttWsIZ+Uw=
 github.com/andela-sjames/priorityQueue v1.2.0/go.mod h1:g1g5gQZGZxfgOjFYFS+jSvSwtEvL7hCdpGAEz/2RNEQ=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
