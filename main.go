@@ -27,7 +27,6 @@ func findShortestPath() []string {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
-	dijstra()
 
 	return []string{"A"}
 }
