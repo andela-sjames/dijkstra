@@ -42,6 +42,10 @@ func dijstra(g []string, n int, s int) []string {
 		index, priority := minheap.Poll()
 		i1, _ := strconv.Atoi(index)
 		visited[i1] = true
+
+		for i := 0; i < count; i++ {
+
+		}
 	}
 
 	return []string{"B"}
