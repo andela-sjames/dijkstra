@@ -43,6 +43,8 @@ func dijstra(g []string, n int, s int) []string {
 		i1, _ := strconv.Atoi(index)
 		visited[i1] = true
 
+		// loop through all the neighbours of
+		// the current node
 		for i := 0; i < count; i++ {
 
 		}
