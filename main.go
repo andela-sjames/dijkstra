@@ -62,9 +62,7 @@ func dijstra(g [][]int, n int, s int) []string {
 
 		// loop through all the neighbours of
 		// the current node
-		for i := 0; i < count; i++ {
 
-		}
 	}
 
 	return []string{"B"}
