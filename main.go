@@ -8,6 +8,8 @@ import (
 )
 
 func main() {
+
+	// create a proper adj list
 	adjList := [][]int{
 		{1, 6, 8},
 		{0, 4, 6, 9},
