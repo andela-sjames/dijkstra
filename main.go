@@ -8,21 +8,23 @@ import (
 	pqueue "github.com/andela-sjames/priorityQueue"
 )
 
+type adjList []*linkedlist
+
 func main() {
 
-	// create a proper adj list
-	//
-	adjList := [][]int{
-		{1, 6, 8},
-		{0, 4, 6, 9},
-		{4, 6},
-		{4, 5, 8},
-	}
+	// create adj list
+	nodezero := newlist("nodezero")
+	nodeone := newlist("nodeone")
+	nodetwo := newlist("nodetwo")
+	nodethree := newlist("nodethree")
+	nodefour := newlist("nodefour")
 
-	n := 10
+	adjlist := []*linkedlist{nodezero, nodeone, nodetwo, nodethree, nodefour}
+
+	n := 4
 	s := 0
 
-	res := dijstra(adjList, n, s)
+	res := dijstra(adjlist, n, s)
 	fmt.Println(res)
 }
 
@@ -60,7 +62,7 @@ func (l *linkedlist) addNode(data, weight int) error {
 	return nil
 }
 
-func dijstra(g [][]int, n int, s int) []string {
+func dijstra(g adjList, n int, s int) []string {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
