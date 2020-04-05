@@ -32,6 +32,34 @@ type node struct {
 	next   *node
 }
 
+func newlist(name string) *linkedlist {
+	return &linkedlist{
+		name: name,
+	}
+}
+
+type linkedlist struct {
+	name string
+	head *node
+}
+
+func (l *linkedlist) addNode(data, weight int) error {
+	n := &node{
+		data:   data,
+		weight: weight,
+	}
+	if l.head == nil {
+		l.head = n
+	} else {
+		currentNode := l.head
+		for currentNode.next != nil {
+			currentNode = currentNode.next
+		}
+		currentNode.next = n
+	}
+	return nil
+}
+
 func dijstra(g [][]int, n int, s int) []string {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
