@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 	"strconv"
 
@@ -26,7 +27,8 @@ func main() {
 	n := 10
 	s := 0
 
-	dijstra(adjList, n, s)
+	res := dijstra(adjList, n, s)
+	fmt.Println(res)
 }
 
 func dijstra(g [][]int, n int, s int) []string {
