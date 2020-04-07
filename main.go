@@ -108,18 +108,34 @@ func dijstra(g adjList, n int, s int) []int {
 		// loop through all the neighbours of
 		// the current node
 		cn := g[i1].head
-		for cn.next != nil { // bad condition!
+		for {
 			if visited[cn.vertex] {
 				continue
 			}
+
 			newdist := distance[i1] + cn.weight
 			if newdist < distance[cn.vertex] {
 				distance[cn.vertex] = newdist
 				minheap.InsertPriority(string(cn.vertex), newdist)
 			}
 
+			if cn.next == nil {
+				break
+			}
 			cn = cn.next
 		}
+		// for cn.next != nil { // bad condition!
+		// 	if visited[cn.vertex] {
+		// 		continue
+		// 	}
+		// 	newdist := distance[i1] + cn.weight
+		// 	if newdist < distance[cn.vertex] {
+		// 		distance[cn.vertex] = newdist
+		// 		minheap.InsertPriority(string(cn.vertex), newdist)
+		// 	}
+
+		// 	cn = cn.next
+		// }
 
 	}
 
