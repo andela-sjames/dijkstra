@@ -100,12 +100,15 @@ func dijstra(g adjList, n int, s int) []string {
 		}
 
 		// while it's not 0
-		index, priority := minheap.Poll()
+		index, _ := minheap.Poll()
 		i1, _ := strconv.Atoi(index)
+
+		// current node is i1
 		visited[i1] = true
 
 		// loop through all the neighbours of
 		// the current node
+		cn := g[i1]
 
 	}
 
