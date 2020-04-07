@@ -71,7 +71,7 @@ func (l *linkedlist) addNode(vertex, weight int) error {
 	return nil
 }
 
-func dijstra(g adjList, n int, s int) []string {
+func dijstra(g adjList, n int, s int) []int {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
@@ -108,11 +108,23 @@ func dijstra(g adjList, n int, s int) []string {
 
 		// loop through all the neighbours of
 		// the current node
-		cn := g[i1]
+		cn := g[i1].head
+		for cn.next != nil {
+			if visited[cn.vertex] {
+				continue
+			}
+			newdist := distance[i1] + cn.weight
+			if newdist < distance[cn.vertex] {
+				distance[cn.vertex] = newdist
+				minheap.InsertPriority(string(cn.vertex), newdist)
+			}
+
+			cn = cn.next
+		}
 
 	}
 
-	return []string{"B"}
+	return distance
 }
 
 // this should return the path for points distance covered.
