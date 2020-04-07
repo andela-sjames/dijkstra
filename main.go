@@ -12,22 +12,21 @@ type adjList []*linkedlist
 
 func main() {
 
-	// create adj list
 	nodezero := newlist("nodezero")
-	nodeone := newlist("nodeone")
-	nodetwo := newlist("nodetwo")
-	nodethree := newlist("nodethree")
-	nodefour := newlist("nodefour")
-
 	nodezero.addNode(1, 4)
 	nodezero.addNode(2, 1)
 
+	nodeone := newlist("nodeone")
 	nodeone.addNode(3, 1)
 
+	nodetwo := newlist("nodetwo")
 	nodetwo.addNode(1, 2)
 	nodetwo.addNode(3, 5)
 
+	nodethree := newlist("nodethree")
 	nodethree.addNode(4, 3)
+
+	nodefour := newlist("nodefour")
 
 	adjlist := []*linkedlist{nodezero, nodeone, nodetwo, nodethree, nodefour}
 
