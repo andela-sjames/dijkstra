@@ -19,6 +19,16 @@ func main() {
 	nodethree := newlist("nodethree")
 	nodefour := newlist("nodefour")
 
+	nodezero.addNode(1, 4)
+	nodezero.addNode(2, 1)
+
+	nodeone.addNode(3, 1)
+
+	nodetwo.addNode(1, 2)
+	nodetwo.addNode(3, 5)
+
+	nodethree.addNode(4, 3)
+
 	adjlist := []*linkedlist{nodezero, nodeone, nodetwo, nodethree, nodefour}
 
 	n := 4
@@ -29,7 +39,7 @@ func main() {
 }
 
 type node struct {
-	data   int
+	vertex int
 	weight int
 	next   *node
 }
@@ -45,9 +55,9 @@ type linkedlist struct {
 	head *node
 }
 
-func (l *linkedlist) addNode(data, weight int) error {
+func (l *linkedlist) addNode(vertex, weight int) error {
 	n := &node{
-		data:   data,
+		vertex: vertex,
 		weight: weight,
 	}
 	if l.head == nil {
