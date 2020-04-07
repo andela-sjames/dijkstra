@@ -30,7 +30,7 @@ func main() {
 
 	adjlist := []*linkedlist{nodezero, nodeone, nodetwo, nodethree, nodefour}
 
-	n := 4
+	n := 5
 	s := 0
 
 	res := dijstra(adjlist, n, s)
