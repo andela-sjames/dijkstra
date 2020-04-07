@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"strconv"
 
 	pqueue "github.com/andela-sjames/priorityQueue"
@@ -83,7 +82,7 @@ func dijstra(g adjList, n int, s int) []int {
 	}
 
 	for i := range distance {
-		distance[i] = int(math.Inf(+1))
+		distance[i] = 1000 // some high value
 	}
 
 	distance[s] = 0
@@ -109,7 +108,7 @@ func dijstra(g adjList, n int, s int) []int {
 		// loop through all the neighbours of
 		// the current node
 		cn := g[i1].head
-		for cn.next != nil {
+		for cn.next != nil { // bad condition!
 			if visited[cn.vertex] {
 				continue
 			}
