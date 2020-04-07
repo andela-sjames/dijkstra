@@ -94,6 +94,7 @@ func dijstra(g adjList, n int, s int) []int {
 	minheap.InsertPriority(string(s), 0)
 
 	for {
+		minheap.ShowHeap()
 		if minheap.Length() == 0 {
 			break
 		}
