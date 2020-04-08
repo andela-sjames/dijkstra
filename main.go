@@ -106,6 +106,7 @@ func dijstra(g adjList, n int, s int) []int {
 		// loop through all the neighbours of
 		// the current node
 		cn := g[i1].head // do loop
+		fmt.Println(i1, "i1111")
 		for {
 			fmt.Println(cn.vertex, "cn.vertex")
 			fmt.Println(visited, "visited")
