@@ -94,22 +94,17 @@ func dijstra(g adjList, n int, s int) []int {
 	minheap.InsertPriority(string(s), 0)
 
 	for minheap.Length() != 0 {
-		v := minheap.ShowHeap()
-		fmt.Println(v)
 
 		index, _ := minheap.Poll()
-		i1, _ := strconv.Atoi(index) // culprit
+		i1, _ := strconv.Atoi(index)
 
 		// current node is i1
 		visited[i1] = true
 
 		// loop through all the neighbours of
 		// the current node
-		cn := g[i1].head // do loop
-		fmt.Println(i1, "i1111")
-		for {
-			fmt.Println(cn.vertex, "cn.vertex")
-			fmt.Println(visited, "visited")
+		cn := g[i1].head
+		for cn != nil {
 
 			if visited[cn.vertex] {
 				continue
