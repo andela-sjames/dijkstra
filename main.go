@@ -125,8 +125,3 @@ func dijstra(g adjList, n int, s int) []int {
 
 	return distance
 }
-
-// this should return the path for points distance covered.
-func findShortestPath() []string {
-	return []string{"A"}
-}
