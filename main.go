@@ -122,6 +122,5 @@ func dijstra(g adjList, n int, s int) []int {
 			cn = cn.next
 		}
 	}
-
 	return distance
 }
