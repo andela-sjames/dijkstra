@@ -26,7 +26,6 @@ func main() {
 	nodethree.addNode(4, 3)
 
 	nodefour := newlist("nodefour")
-
 	adjlist := []*linkedlist{nodezero, nodeone, nodetwo, nodethree, nodefour}
 
 	n := 5
