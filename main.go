@@ -81,7 +81,7 @@ func dijstra(g adjList, n int, s int) []int {
 	}
 
 	for i := range distance {
-		distance[i] = 1000 // some high value
+		distance[i] = 1000 // some high value ? revisit
 	}
 
 	distance[s] = 0
