@@ -93,11 +93,15 @@ func dijstra(g adjList, n int, s int) []int {
 
 	for minheap.Length() != 0 {
 
-		stringIndex, _ := minheap.Poll()
+		stringIndex, min := minheap.Poll()
 		integerIndex, _ := strconv.Atoi(stringIndex)
 
 		// current node is integerIndex
 		visited[integerIndex] = true
+
+		if distance[integerIndex] < min {
+			continue
+		}
 
 		// loop through all the neighbours of
 		// the current node
