@@ -52,7 +52,7 @@ type linkedlist struct {
 	head *node
 }
 
-func (l *linkedlist) addNode(vertex, weight int) error {
+func (l *linkedlist) addNode(vertex, weight int) {
 	n := &node{
 		vertex: vertex,
 		weight: weight,
@@ -66,7 +66,6 @@ func (l *linkedlist) addNode(vertex, weight int) error {
 		}
 		currentNode.next = n
 	}
-	return nil
 }
 
 func dijstra(g adjList, n int, s int) []int {
