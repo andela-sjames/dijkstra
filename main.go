@@ -99,6 +99,8 @@ func dijstra(g adjList, n int, s int) []int {
 		// current node is integerIndex
 		visited[integerIndex] = true
 
+		// optimization to ignore stale index stale
+		// (index, min_dis) pair
 		if distance[integerIndex] < min {
 			continue
 		}
