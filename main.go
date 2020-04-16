@@ -120,6 +120,7 @@ func dijstra(g adjList, n int, s int) []int {
 
 			newdist := distance[integerIndex] + cn.weight
 			if newdist < distance[cn.vertex] {
+				previous[cn.vertex] = integerIndex
 				distance[cn.vertex] = newdist
 				minheap.InsertPriority(strconv.Itoa(cn.vertex), newdist)
 			}
