@@ -31,8 +31,8 @@ func main() {
 	n := 5
 	s := 0
 
-	res := dijstra(adjlist, n, s)
-	fmt.Println(res)
+	dist, prev := dijstra(adjlist, n, s)
+	fmt.Println(dist, prev)
 }
 
 type node struct {
@@ -68,7 +68,7 @@ func (l *linkedlist) addNode(vertex, weight int) {
 	}
 }
 
-func dijstra(g adjList, n int, s int) []int {
+func dijstra(g adjList, n int, s int) ([]int, []int) {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
@@ -131,7 +131,7 @@ func dijstra(g adjList, n int, s int) []int {
 			cn = cn.next
 		}
 	}
-	return distance
+	return distance, previous
 }
 
 func findShortestPath() {
