@@ -128,3 +128,7 @@ func dijstra(g adjList, n int, s int) []int {
 	}
 	return distance
 }
+
+func findShortestPath() {
+
+}
