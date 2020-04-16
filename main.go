@@ -75,6 +75,10 @@ func dijstra(g adjList, n int, s int) []int {
 	visited := make([]bool, n)
 	distance := make([]int, n)
 
+	// keep track of the previous node we took
+	// to get to the current node
+	previous := make([]int, n)
+
 	for i := range visited {
 		visited[i] = false
 	}
