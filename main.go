@@ -140,5 +140,8 @@ func findShortestPath(g adjList, n int, s int, e int) {
 	// s - the index of the starting node ( 0 <= s < n )
 	// e - the index of the end node (0 <= e < n )
 	dist, prev := dijstra(g, n, s)
-	fmt.Println(dist, prev)
+	path := make([]int, n)
+
+	if dist[e] == 1000 // need this to be infinity later
+	fmt.Println(dist, prev, path)
 }
