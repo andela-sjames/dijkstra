@@ -147,7 +147,7 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 		fmt.Println("the end path")
 		return path
 	}
-	fmt.Println(dist, prev, path)
+	// fmt.Println(dist, prev, path)
 
 	return path
 }
