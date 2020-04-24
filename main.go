@@ -144,7 +144,7 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 	path := make([]int, n)
 
 	if dist[e] == 1000 { // need this to be infinity later
-		fmt.Println("the end path")
+		// fmt.Println("the end path")
 		return path
 	}
 	fmt.Println(dist, prev, path)
