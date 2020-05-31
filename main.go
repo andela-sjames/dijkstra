@@ -28,12 +28,12 @@ func main() {
 	nodefour := newlist("nodefour")
 	adjlist := []*linkedlist{nodezero, nodeone, nodetwo, nodethree, nodefour}
 
-	n := 5
+	n := len(adjlist)
 	s := 0
 	e := 4
 
 	res := findShortestPath(adjlist, n, s, e)
-	fmt.Println(res)
+	fmt.Println(res, "res")
 }
 
 type node struct {
@@ -104,7 +104,7 @@ func dijstra(g adjList, n int, s int) ([]int, []int) {
 		// current node is integerIndex
 		visited[integerIndex] = true
 
-		// optimization to ignore stale index stale
+		// optimization to ignore stale index
 		// (index, min_dis) pair
 		if distance[integerIndex] < min {
 			continue
@@ -141,15 +141,19 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 	// s - the index of the starting node ( 0 <= s < n )
 	// e - the index of the end node (0 <= e < n )
 	dist, prev := dijstra(g, n, s)
-	path := make([]int, n)
+	path := make([]int, 0)
 
 	if dist[e] == 1000 { // need this to be infinity later
-		// fmt.Println("the end path")
-		// I am back to this, need to finish this over the weekend!
-		// extra line.
+		fmt.Println("the end path")
 		return path
 	}
-	fmt.Println(dist, prev, path)
+
+	// start from the end and loop all the way back to the beginning.
+	for pointer := e; pointer != 0; pointer = prev[pointer] {
+		fmt.Println(pointer, "p")
+		path = append(path, pointer)
+	}
+	fmt.Println(dist, prev, path, " dpp")
 
 	return path
 }
