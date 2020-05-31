@@ -98,30 +98,30 @@ func dijstra(g adjList, n int, s int) ([]int, []int) {
 
 	for minheap.Length() != 0 {
 
-		stringIndex, min := minheap.Poll()
-		integerIndex, _ := strconv.Atoi(stringIndex)
+		stringAtIndex, min := minheap.Poll()
+		integerAtIndex, _ := strconv.Atoi(stringAtIndex)
 
-		// current node is integerIndex
-		visited[integerIndex] = true
+		// current node is integerAtIndex
+		visited[integerAtIndex] = true
 
 		// optimization to ignore stale index
 		// (index, min_dis) pair
-		if distance[integerIndex] < min {
+		if distance[integerAtIndex] < min {
 			continue
 		}
 
 		// loop through all the neighbours of
 		// the current node
-		cn := g[integerIndex].head
+		cn := g[integerAtIndex].head
 		for cn != nil {
 
 			if visited[cn.vertex] {
 				continue
 			}
 
-			newdist := distance[integerIndex] + cn.weight
+			newdist := distance[integerAtIndex] + cn.weight
 			if newdist < distance[cn.vertex] {
-				previous[cn.vertex] = integerIndex
+				previous[cn.vertex] = integerAtIndex
 				distance[cn.vertex] = newdist
 				minheap.InsertPriority(strconv.Itoa(cn.vertex), newdist)
 			}
