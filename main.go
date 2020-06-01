@@ -149,7 +149,6 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 
 	// start from the end and loop all the way back to the beginning.
 	for pointer := e; pointer != 0; pointer = prev[pointer] {
-		fmt.Println(pointer, "p")
 		path = append(path, pointer)
 	}
 	fmt.Println(dist, prev, path, " dpp")
