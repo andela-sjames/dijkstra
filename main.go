@@ -32,8 +32,8 @@ func main() {
 	s := 0
 	e := 4
 
-	res := findShortestPath(adjlist, n, s, e)
-	fmt.Println("0 -", res)
+	dist, path := findShortestPath(adjlist, n, s, e)
+	fmt.Println(dist, path)
 }
 
 type node struct {
@@ -151,7 +151,7 @@ func dijstra(g adjList, n int, s int, e int) ([]int, []int) {
 	return distance, previous
 }
 
-func findShortestPath(g adjList, n int, s int, e int) []int {
+func findShortestPath(g adjList, n int, s int, e int) ([]int, []int) {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
@@ -160,15 +160,14 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 	path := make([]int, 0)
 
 	if dist[e] == 1000 { // need this to be infinity later
-		return path
+		return path, nil
 	}
 
 	// start from the end and loop all the way back to the beginning.
 	for pointer := e; pointer != 0; pointer = prev[pointer] {
 		path = append(path, pointer)
 	}
-	// fmt.Println(dist, prev, path, " dpp")
 	sp := reverseSlice(path)
 
-	return sp
+	return dist, sp
 }
