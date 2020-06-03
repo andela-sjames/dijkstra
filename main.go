@@ -30,7 +30,7 @@ func main() {
 
 	n := len(adjlist)
 	s := 0
-	e := 4
+	e := 3
 
 	res := findShortestPath(adjlist, n, s, e)
 	fmt.Println(res, "res")
@@ -69,10 +69,11 @@ func (l *linkedlist) addNode(vertex, weight int) {
 	}
 }
 
-func dijstra(g adjList, n int, s int) ([]int, []int) {
+func dijstra(g adjList, n int, s int, e int) ([]int, []int) {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
+	// e - the index of the end node ( 0 <= e < n )
 	visited := make([]bool, n)
 	distance := make([]int, n)
 
@@ -131,6 +132,12 @@ func dijstra(g adjList, n int, s int) ([]int, []int) {
 			}
 			cn = cn.next
 		}
+
+		// Optimise here to stop early.
+		if integerAtIndex == e {
+			return distance, previous
+		}
+
 	}
 	return distance, previous
 }
@@ -140,7 +147,7 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
 	// e - the index of the end node (0 <= e < n )
-	dist, prev := dijstra(g, n, s)
+	dist, prev := dijstra(g, n, s, e)
 	path := make([]int, 0)
 
 	if dist[e] == 1000 { // need this to be infinity later
@@ -151,7 +158,7 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 	for pointer := e; pointer != 0; pointer = prev[pointer] {
 		path = append(path, pointer)
 	}
-	// fmt.Println(dist, prev, path, " dpp")
+	fmt.Println(dist, prev, path, " dpp")
 
 	return path
 }
