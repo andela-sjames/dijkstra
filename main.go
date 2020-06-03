@@ -30,7 +30,7 @@ func main() {
 
 	n := len(adjlist)
 	s := 0
-	e := 3
+	e := 4
 
 	res := findShortestPath(adjlist, n, s, e)
 	fmt.Println(res, "res")
@@ -46,6 +46,15 @@ func newlist(name string) *linkedlist {
 	return &linkedlist{
 		name: name,
 	}
+}
+
+func reverseSlice(a []int) []int {
+	for i := len(a)/2 - 1; i >= 0; i-- {
+		opp := len(a) - 1 - i
+		a[i], a[opp] = a[opp], a[i]
+	}
+
+	return a
 }
 
 type linkedlist struct {
@@ -159,6 +168,7 @@ func findShortestPath(g adjList, n int, s int, e int) []int {
 		path = append(path, pointer)
 	}
 	fmt.Println(dist, prev, path, " dpp")
+	sp := reverseSlice(path)
 
-	return path
+	return sp
 }
