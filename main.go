@@ -33,7 +33,7 @@ func main() {
 	e := 4
 
 	res := findShortestPath(adjlist, n, s, e)
-	fmt.Println(res, "res")
+	fmt.Println("0 -", res)
 }
 
 type node struct {
