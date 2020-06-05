@@ -18,6 +18,6 @@ Let's implement the Dijkstra Algorithm.
 
 ![Adjacency List](adjList_dsp.png)
 
-## Result of Djikstra shortest path
+## Result of Dijkstra shortest path
 
 ![djikstra](djikstra.png)
