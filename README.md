@@ -9,3 +9,5 @@ Let's implement the Dijkstra Algorithm.
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Nodes| 0 | 1 | 2 | 3 | 4 |
 | Distance from node | 0| 3| 1| 4| 7|
+
+![Directed Acyclic Graph](Dag_dsp.png)
