@@ -20,4 +20,4 @@ Let's implement the Dijkstra Algorithm.
 
 ## Result of Djikstra shortest path
 
-![dijkstra](dijkstra.png)
+![djikstra](djikstra.png)
