@@ -28,4 +28,5 @@ Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 dijkstra git:(master) go run main.go
 Distance graph:  [0 3 1 4 7]
 Shortest Path:  [2 1 3 4]
+Shortest Distance:  7
 ```
