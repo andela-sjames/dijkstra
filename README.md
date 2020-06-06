@@ -2,7 +2,7 @@
 
 Let's implement the Dijkstra Algorithm.
 
-<https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/>
+Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 
 `Distance table: Example usecase`
 |||||||
