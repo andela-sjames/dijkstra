@@ -7,8 +7,8 @@ Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 `Distance table: Example usecase`
 |||||||
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Nodes| 0 | 1 | 2 | 3 | 4 |
-| Distance from node | 0| 3| 1| 4| 7|
+| Nodes/Vertices| 0 | 1 | 2 | 3 | 4 |
+| Distance from node/Edge | 0| 3| 1| 4| 7|
 
 ## Example Graph
 
