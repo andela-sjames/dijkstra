@@ -8,13 +8,13 @@ type node struct {
 	next   *node
 }
 
-// LinkedList defined
+// LinkedList struct defined for representing the graph.
 type LinkedList struct {
 	name string
 	head *node
 }
 
-// AddNode defined
+// AddNode adds a node to the linked list data structure.
 func (l *LinkedList) AddNode(vertex, weight int) {
 	n := &node{
 		vertex: vertex,
@@ -31,7 +31,7 @@ func (l *LinkedList) AddNode(vertex, weight int) {
 	}
 }
 
-// NewList defined
+// NewList used to create a new linked list.
 func NewList(name string) *LinkedList {
 	return &LinkedList{
 		name: name,

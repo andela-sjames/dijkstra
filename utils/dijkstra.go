@@ -7,6 +7,15 @@ import (
 	pqueue "github.com/andela-sjames/priorityQueue"
 )
 
+/** 
+dijkstra function in it's base form takes a directed acyclic
+and uses a naive approach - a non Indexed Priority Queue (IPQ)
+to determine the shortest distance from the start of a graph to
+the end of the graph.
+
+It returns a slice of the shortest distance and a slice of the previous
+node traversed to get to the end of the graph.
+**/
 func dijstra(g adjList, n int, s int, e int) ([]int, []int) {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
