@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 
 	pqueue "github.com/andela-sjames/priorityQueue"
@@ -95,7 +96,7 @@ func dijstra(g adjList, n int, s int, e int) ([]int, []int) {
 	}
 
 	for i := range distance {
-		distance[i] = 1000 // some high value ? revisit
+		distance[i] = math.MaxInt64
 	}
 
 	distance[s] = 0
@@ -159,7 +160,7 @@ func findShortestPath(g adjList, n int, s int, e int) ([]int, []int) {
 	dist, prev := dijstra(g, n, s, e)
 	path := make([]int, 0)
 
-	if dist[e] == 1000 { // need this to be infinity later
+	if dist[e] == math.MaxInt64 {
 		return path, nil
 	}
 
@@ -167,7 +168,7 @@ func findShortestPath(g adjList, n int, s int, e int) ([]int, []int) {
 	for pointer := e; pointer != 0; pointer = prev[pointer] {
 		path = append(path, pointer)
 	}
-	sp := reverseSlice(path)
+	shortestPath := reverseSlice(path)
 
-	return dist, sp
+	return dist, shortestPath
 }

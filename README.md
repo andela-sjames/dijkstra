@@ -4,7 +4,7 @@ Let's implement the Dijkstra Algorithm.
 
 <https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/>
 
-`Dist table: Example usecase`
+`Distance table: Example usecase`
 |||||||
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Nodes| 0 | 1 | 2 | 3 | 4 |
@@ -12,12 +12,12 @@ Let's implement the Dijkstra Algorithm.
 
 ## Example Graph
 
-![Directed Acyclic Graph](Dag_dsp.png)
+![Directed Acyclic Graph](images/Dag_dsp.png)
 
 ## Adjacency list
 
-![Adjacency List](adjList_dsp.png)
+![Adjacency List](images/adjList_dsp.png)
 
 ## Result of Dijkstra shortest path
 
-![djikstra](djikstra.png)
+![djikstra](images/djikstra.png)
