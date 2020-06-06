@@ -30,5 +30,6 @@ func main() {
 	e := 4
 
 	dist, path := utils.FindShortestPath(adjlist, n, s, e)
-	fmt.Println(dist, path)
+	fmt.Println("Distance graph: ", dist)
+	fmt.Println("Shortest Path: ", path)
 }

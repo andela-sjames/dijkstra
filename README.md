@@ -21,3 +21,11 @@ Let's implement the Dijkstra Algorithm.
 ## Result of Dijkstra shortest path
 
 ![djikstra](images/djikstra.png)
+
+## Result
+
+```shell
+dijkstra git:(master) go run main.go
+Distance graph:  [0 3 1 4 7]
+Shortest Path:  [2 1 3 4]
+```
