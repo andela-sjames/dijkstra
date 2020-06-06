@@ -12,7 +12,7 @@ Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 
 ## Example Weighted Graph
 
-![Directed Acyclic Graph](images/Dag_dsp_0.png)
+![Directed Acyclic Graph](images/dag_dsp_a.png)
 
 ## Adjacency list
 
@@ -20,7 +20,7 @@ Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 
 ## Result of Dijkstra shortest path
 
-![djikstra](images/djikstra_0.png)
+![dijkstra](images/dijkstra_a.png)
 
 ## Result
 
