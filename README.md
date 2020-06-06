@@ -8,7 +8,7 @@ Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 |||||||
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Nodes/Vertices| 0 | 1 | 2 | 3 | 4 |
-| Distance from node/Edge | 0| 3| 1| 4| 7|
+| Distance from node | 0| 3| 1| 4| 7|
 
 ## Example Graph
 
