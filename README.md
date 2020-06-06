@@ -12,7 +12,7 @@ Inspired by this lesson: <https://www.youtube.com/watch?v=pSqmAO-m7Lk>
 
 ## Example Weighted Graph
 
-![Directed Acyclic Graph](images/Dag_dsp_0).png)
+![Directed Acyclic Graph](images/Dag_dsp_0.png)
 
 ## Adjacency list
 
